@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>cros-demo</title>
 </head>
 <body>
-
+<button class="btn">点击跨域获取数据</button>
+<p class="text"></p>
+<script>
+    var btn = document.getElementsByClassName('btn')[0]
+    var text = document.getElementsByClassName('text')[0]
+    btn.addEventListener('click', function () {
+        var xhr = new XMLHttpRequest()
+        var url = 'http://localhost:3001/cros'
+        xhr.open('GET', url)
+        xhr.send(null)
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                text.innerHTML = xhr.responseText
+            }
+        }
+    })
+</script>
 </body>
 </html>
