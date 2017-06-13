@@ -17,7 +17,7 @@
         xhr.send(null)                       // 发送给3001端口数据为空
         xhr.onreadystatechange = () => {     // 请求状态改变后调用这个函数
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {  // 如果请求成功
-                text.innerHTML = xhr.responseText
+                text.innerHTML = xhr.response
             }
         }
     })
