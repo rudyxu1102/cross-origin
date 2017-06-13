@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求页面</title>
+    <style>
+        #child {
+            border: 2px solid greenyellow;
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #father {
+            border: 2px solid darkturquoise;
+            width: 500px;
+            height: 200px;
+            margin: 0 auto 20px;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <p>这里3004端口</p>
+    <input type="text"/>
+    <button>发送信息</button>
+</div>
+<iframe id="child" src="http://localhost:3005"></iframe>
+<script>
+    var input = document.getElementsByTagName('input')[0]
+    var p = document.getElementsByTagName('p')[0]
+    var btn = document.getElementsByTagName('button')[0]
+    var frame = document.getElementById('child').contentWindow
+
+    btn.onclick = function () {
+        var msg = input.value
+        frame.postMessage(msg, 'http://localhost:3005')
+    }
+
+    function receiveMessage (event) {
+        var data = event.data
+        p.innerHTML = data
+    }
+
+    window.addEventListener('message', receiveMessage, false)
+</script>
+</body>
+</html>
