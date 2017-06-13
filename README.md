@@ -32,3 +32,7 @@ jsonp-demo目录下
 
 ### postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域
+
+
+
+还在更新中....
