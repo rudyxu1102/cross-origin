@@ -30,6 +30,7 @@ cros-demo目录下
 
 ### postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域
+在 http://localhost:3004/ 可以进行与不同源的子窗口进行跨域
 
 
 

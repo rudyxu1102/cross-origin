@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^0.17.4"
   }
 }

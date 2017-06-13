@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求页面</title>
+</head>
+<body>
+<h1 style="text-align: center;">通过http-proxy-middleware插件设置代理</h1>
+<button>点击跨域</button>
+<p>hello world!</p>
+<script>
+    var btn = document.getElementsByTagName('button')[0]
+    var text = document.getElementsByTagName('p')[0]
+    btn.addEventListener('click', function () {
+        var xhr = new XMLHttpRequest()
+        var url = 'http://localhost:3006/api'    // 请求的3001端口获取数据
+        xhr.open('GET', url)                 // 与3001端口建立一个连接
+        xhr.send(null)                       // 发送给3001端口数据为空
+        xhr.onreadystatechange = () => {     // 请求状态改变后调用这个函数
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {  // 如果请求成功
+                text.innerHTML = xhr.response
+            }
+        }
+    })
+</script>
+</body>
+</html>
