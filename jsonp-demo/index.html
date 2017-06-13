@@ -5,6 +5,16 @@
     <title></title>
 </head>
 <body>
-
+<p>hello world</p>
+<script>
+    function myFunction (data) {
+        var p = document.getElementsByTagName('p')[0]
+        setTimeout(function () {
+            p.innerHTML = data.message
+        }, 2000)
+        // 2s后p标签内的内容将改变
+    }
+</script>
+<script src="http://localhost:3003?callback=myFunction"></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
-/**
- * Created by 许浩东 on 2017/6/13.
- */
+var express = require('express'); // 引用express模块
+var app = express();  // 创建一个简单的服务器
+
+var requestPort = 3002;  // 请求页面跑在3002端口
+
+app.use(express.static(__dirname));
+app.listen(requestPort, function () {
+    console.log('Requester is listening on port '+ requestPort);
+});
