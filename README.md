@@ -21,12 +21,9 @@ cros-demo目录下
 在 http://localhost:3001/ 看到所需要的数据
 
 ### JSONP跨域
-jsonp-demo目录下
-1. node serverRes.js
-2. 重新开一个dos窗口
-3. node serverReq.js
-
-> 如果觉得上面的步骤麻烦，可以直接在jsonp-demo目录下的dos窗口`输入run.bat`，直接一步完成
+如果觉得上面的步骤麻烦，可以直接在jsonp-demo目录下的dos窗口`输入run.bat`，直接一步完成
+也可以跟原来的步骤一样（如下）
+jsonp-demo目录下1. node serverRes.js  2. 重新开一个dos窗口   3. node serverReq.js
 
 项目运行起来后，请求页面为 http://localhost:3002/ ，响应页面为 http://localhost:3003/
 
