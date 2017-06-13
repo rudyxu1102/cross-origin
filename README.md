@@ -12,9 +12,9 @@
 
 ### CROS跨域
 cros-demo目录下
-1. node serverReq.js
+1. node serverRes.js
 2. 重新开一个dos窗口
-3. node serverRes.js
+3. node serverReq.js
 
 项目运行起来之后，
 可以在 http://localhost:3000/ 请求数据，
@@ -22,8 +22,8 @@ cros-demo目录下
 
 ### JSONP跨域
 jsonp-demo目录下
-1. node serverReq.js
+1. node serverRes.js
 2. 重新开一个dos窗口
-3. node serverRes.js
+3. node serverReq.js
 
 项目运行起来后，请求页面为 http://localhost:3002/ ，响应页面为 http://localhost:3003/
