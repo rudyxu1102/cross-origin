@@ -11,10 +11,11 @@
 2. 进入对应的demo目录
 
 ### CROS跨域
+cros-demo目录下
 1. node serverReq.js
 2. 重新开一个dos窗口
 3. node serverRes.js
 
 项目运行起来之后，
-可以在 http://localhost:3000 请求数据，
-在 http://localhost:3001 看到所需要的数据
+可以在 http://localhost:3000/ 请求数据，
+在 http://localhost:3001/ 看到所需要的数据
