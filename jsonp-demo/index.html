@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>JSONP-demo</title>
 </head>
 <body>
 <p>hello world</p>
 <script>
     function myFunction (data) {
-        var p = document.getElementsByTagName('p')[0]
+        alert('获取数据成功，2s后改变数据！')
+        let p = document.getElementsByTagName('p')[0]
         setTimeout(function () {
             p.innerHTML = data.message
         }, 2000)
@@ -16,5 +17,6 @@
     }
 </script>
 <script src="http://localhost:3003?callback=myFunction"></script>
+<!--在src里面的问号？后面的参数（myFunction）可以在3003端口页面中可以通过req.query.callback获取-->
 </body>
 </html>

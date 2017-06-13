@@ -5,7 +5,6 @@ var responsePort = 3003;  // 响应请求的页面跑在3001端口
 
 app.get('/', function (req, res) {
     var callbackName = req.query.callback;   // myFunction
-    res.set('Content-Type', 'application/javascript');
     res.send(callbackName+"({'message': 'hello world from JSONP!'});");
     // myFunction({'message': 'hello world from JSONP!'}) 一个带参数的执行函数
 })
