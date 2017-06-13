@@ -24,7 +24,7 @@ cros-demo目录下
  - 可以直接在jsonp-demo目录下的dos窗口`输入run.bat`，直接一步完成。
 
  - 也可以跟原来的步骤一样，
-在jsonp-demo目录下1. node serverRes.js  2. 重新开一个dos窗口   3. node serverReq.js
+在jsonp-demo目录下①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
 
 项目运行起来后，请求页面为 http://localhost:3002/ ，响应页面为 http://localhost:3003/
 
@@ -33,4 +33,4 @@ cros-demo目录下
 
 
 
-还在更新中....
+> 还在更新中....
