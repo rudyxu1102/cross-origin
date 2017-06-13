@@ -10,5 +10,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(responsePort, function () {
-    console.log('responser is listening on port '+ responsePort);
+    console.log('cros_responser is listening on port '+ responsePort);
 });
