@@ -28,8 +28,8 @@ cros-demo目录下
 在jsonp-demo目录下①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
 
 项目运行起来后，
-- 请求页面： http://localhost:3002/
-- 响应页面为 http://localhost:3003/
+> 请求页面： http://localhost:3002/
+> 响应页面为 http://localhost:3003/
 
 ### 三、postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域，
@@ -46,7 +46,7 @@ cros-demo目录下
 不使用插件配置代理，直接使用http模块发出请求， 在 http://localhost:3008/ 运行
 
 ### window.name跨域
-在 http://localhost:4001/a.html 使用js动态生成一个隐藏的iframe，设置src属性为'http://localhost:4002/c.html'，等这个iframe加载完之后，重新设置src属性为同源的地址'http://localhost:4001/b.html'，b.html是一个空的html文件。
+在 http://localhost:4001/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://localhost:4002/c.html '，等这个iframe加载完之后，重新设置src属性为同源的地址' http://localhost:4001/b.html '，b.html是一个空的html文件。
 
 
 > 项目运行地址： http://localhost:4001/a.html
