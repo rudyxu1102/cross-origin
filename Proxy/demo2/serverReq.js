@@ -1,13 +1,13 @@
 var express = require('express');
 var http= require('http');
 
-var portNumber = 3008;
+var portNumber = 3000;
 var app = express();
 
 app.use(express.static(__dirname)); //即index.html
 
 app.get('/proxy', function(request, response){
-    var url = request.query.url    // http://localhost:3009/
+    var url = request.query.url    // http://localhost:3001/
 
     // 向url发出请求
     http.get(url, function(responseFromOtherDomain) {
