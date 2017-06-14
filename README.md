@@ -45,7 +45,7 @@ cros-demo目录下
 - demo2
 不使用插件配置代理，直接使用http模块发出请求， 在 http://localhost:3008/ 运行
 
-### window.name跨域
+### 五、window.name跨域
 在 http://localhost:4001/a.html 使用js动态生成一个隐藏的iframe，设置src属性为' http://localhost:4002/c.html '，等这个iframe加载完之后，重新设置src属性为同源的地址' http://localhost:4001/b.html '，b.html是一个空的html文件。
 
 
