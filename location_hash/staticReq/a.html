@@ -2,40 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>window.name跨域</title>
+    <title>location.hash跨域</title>
 </head>
 <body>
 <p>hello world</p>
 <script>
 var p = document.getElementsByTagName('p')[0]
-var isFirst = true
+
 var iframe = document.createElement('iframe')
-var loadFunc = function () {
-    if(isFirst){
-        //加载完url后，重新定向回原域
-        iframe.contentWindow.location = 'http://localhost:4001/b.html';
-        isFirst = false;
-    }else {
-        //iframe回到原域后，获取name的值，执行回调函数，然后销毁iframe
-        p.innerHTML = iframe.contentWindow.name;
-        iframe.contentWindow.close();
-        document.body.removeChild(ifr);
-        iframe.src = '';
-        iframe = null;
-    }
-}
-
-
-iframe.src = 'http://localhost:4002/c.html'; //第一次加载url
+iframe.src = 'http://localhost:3001/c.html#getdata'   // location.hash为'#getdata'
 iframe.style.display = 'none';
 document.body.appendChild(iframe);
 
-//监听iframe是否加载，加载完执行loadFunc
-if(iframe.attachEvent){   // 如果iframe.attachEvent无法使用，则使用onload添加监听事件
-    iframe.attachEvent('onload', loadFunc);
-}else{
-    iframe.onload = loadFunc;
+function checkHash () {
+    if (location.hash) {
+        let data = location.hash.substring(1)     // 去除'#'号
+        p.innerHTML = data
+    }
 }
+setInterval(checkHash, 2000);   // 每隔2s监听hash值是否发生变化
 </script>
 </body>
 </html>

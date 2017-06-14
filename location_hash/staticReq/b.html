@@ -5,6 +5,10 @@
     <title></title>
 </head>
 <body>
-
+<script>
+// 3000/b.html属于3001/c.html的子窗口，3001/c.html属于3000/a.html的子窗口，故parent.parent为a.html
+//因为parent.parent和自身属于同一个域，所以可以改变其location.hash的值
+parent.parent.location.hash = self.location.hash.substring(1);
+</script>
 </body>
 </html>
