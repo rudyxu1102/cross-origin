@@ -17,9 +17,9 @@ cros-demo目录下
 2. 重新开一个dos窗口
 3. node serverReq.js
 
-- 项目运行起来之后，
- - 请求数据页面地址： http://localhost:3000/
- - 查看数据： http://localhost:3001/
+项目运行起来之后，
+- 请求数据页面地址： http://localhost:3000/
+- 查看数据： http://localhost:3001/
 
 ### 二、JSONP跨域
  - 可以直接在jsonp-demo目录下的dos窗口`输入run.bat`，直接一步完成。
@@ -27,14 +27,14 @@ cros-demo目录下
  - 也可以跟原来的步骤一样，
 在jsonp-demo目录下①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
 
-- 项目运行起来后，
- - 请求页面： http://localhost:3002/
- - 响应页面为 http://localhost:3003/
+项目运行起来后，
+- 请求页面： http://localhost:3002/
+- 响应页面为 http://localhost:3003/
 
 ### 三、postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域，
-           
-项目运行地址： http://localhost:3004/
+
+> 项目运行地址： http://localhost:3004/
 
 ### 四、后端设置代理proxy跨域
 因为JS同源策略是浏览器的安全策略，所以在浏览器客户端不能跨域访问，而服务器端调用HTTP接口只是使用HTTP协议，不会执行JS脚本，不需要同源策略，也就没有跨越问题。
@@ -46,10 +46,10 @@ cros-demo目录下
 不使用插件配置代理，直接使用http模块发出请求， 在 http://localhost:3008/ 运行
 
 ### window.name跨域
-在 http://localhost:4001/a.html使用js动态生成一个隐藏的iframe，设置src属性为'http://localhost:4002/c.html'，等这个iframe加载完之后，重新设置src属性为同源的地址'http://localhost:4001/b.html'，b.html是一个空的html文件。
+在 http://localhost:4001/a.html 使用js动态生成一个隐藏的iframe，设置src属性为'http://localhost:4002/c.html'，等这个iframe加载完之后，重新设置src属性为同源的地址'http://localhost:4001/b.html'，b.html是一个空的html文件。
 
 
-     项目运行地址： http://localhost:4001/a.html
+> 项目运行地址： http://localhost:4001/a.html
 
 
 > 还在更新中....
