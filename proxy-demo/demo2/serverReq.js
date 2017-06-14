@@ -9,8 +9,6 @@ app.use(express.static(__dirname)); //即index.html
 app.get('/proxy', function(request, response){
     var url = request.query.url    // http://localhost:3009/
 
-    console.log(url)
-
     // 向url发出请求
     http.get(url, function(responseFromOtherDomain) {
         // data事件会在数据接收过程中，每收到一段数据就触发一次，接收到的数据被传入回调函数。
