@@ -16,7 +16,7 @@
         // 2s后p标签内的内容将改变
     }
 </script>
-<script src="http://localhost:3003?callback=myFunction"></script>
-<!--在src里面的问号？后面的参数（myFunction）可以在3003端口页面中可以通过req.query.callback获取-->
+<script src="http://localhost:3001?callback=myFunction"></script>
+<!--在src里面的问号？后面的参数({callback: 'myFunction'})可以在3001端口页面中可以通过req.query.callback获取-->
 </body>
 </html>

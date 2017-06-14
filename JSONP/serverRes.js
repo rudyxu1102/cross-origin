@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var responsePort = 3003;  // 响应请求的页面跑在3001端口
+var responsePort = 3001;
 
 app.get('/', function (req, res) {
     var callbackName = req.query.callback;   // myFunction
