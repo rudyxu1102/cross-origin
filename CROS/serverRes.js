@@ -1,12 +1,12 @@
 var express = require('express');
 var app = express();
 
-var responsePort = 3001;  // ÏìÓ¦ÇëÇóµÄÒ³ÃæÅÜÔÚ3001¶Ë¿Ú
+var responsePort = 3001;  // å“åº”è¯·æ±‚çš„é¡µé¢è·‘åœ¨3001ç«¯å£
 
-// ¿ÉÒÔ¸Ä±ä¡®/¡¯ÎªÆäËûµÄÂ·¾¶£¬¸ÄÍêÖ®ºóserverReq.jsÀïÃæµÄÇëÇóÂ·¾¶Ò²ĞèÒª¸Ä±ä
+// å¯ä»¥æ”¹å˜â€˜/â€™ä¸ºå…¶ä»–çš„è·¯å¾„ï¼Œæ”¹å®Œä¹‹åserverReq.jsé‡Œé¢çš„è¯·æ±‚è·¯å¾„ä¹Ÿéœ€è¦æ”¹å˜
 app.get('/', (req, res) => {
-    res.set('Access-Control-Allow-Origin', 'http://localhost:3000'); // ÉèÖÃÔÊĞí¿çÓòµÄorigin£¬ÔÊĞí3000¶Ë¿Ú·ÃÎÊ3001¶Ë¿Ú
-    res.send("Hello world from CROS. ?")
+    res.set('Access-Control-Allow-Origin', 'http://localhost:3000'); // è®¾ç½®å…è®¸è·¨åŸŸçš„originï¼Œå…è®¸3000ç«¯å£è®¿é—®3001ç«¯å£
+    res.send("Hello world from CROS.ğŸ˜¡")
 });
 
 app.listen(responsePort, function () {
