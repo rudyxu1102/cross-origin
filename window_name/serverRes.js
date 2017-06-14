@@ -1,3 +1,11 @@
-/**
- * Created by 许浩东 on 2017/6/14.
- */
+var express = require('express');
+var app = express();
+
+var responsePort = 4002;  // 响应请求的页面跑在3001端口
+
+app.use(express.static(__dirname + '/staticRes'));
+
+
+app.listen(responsePort, function () {
+    console.log('Responser is listening on port '+ responsePort);
+});
