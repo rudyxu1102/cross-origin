@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>不使用插件设置代理跨域</title>
 </head>
 <body>
-
+<button>通过Proxy跨域</button>
+<p>hello world！</p>
+<script>
+    var btn = document.getElementsByTagName('button')[0]
+    var text = document.getElementsByTagName('p')[0]
+    btn.addEventListener('click', function () {
+        var xhr = new XMLHttpRequest()
+        // 携带参数{url: 'http://localhost:3009/'}向http://localhost:3008/proxy发出请求，获取数据
+        var proxy_url = 'http://localhost:3008/proxy?url=http://localhost:3009/'
+        // porxy_url是代理的url，不是最终请求的url，最终请求的url放在问号后面，在后台可以通过req.query.url获取
+        // url为实际请求的地址，向3008/proxy发出请求的同时携带这个包含url的对象，这个url在这里只是参数，不是请求路径
+        xhr.open('GET', proxy_url)
+        xhr.send()
+        xhr.onreadystatechange = () => {                 // 请求状态改变后调用这个函数
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {  // 如果请求成功
+                text.innerHTML = xhr.response
+            }
+        }
+    })
+</script>
 </body>
 </html>
