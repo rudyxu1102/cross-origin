@@ -16,7 +16,7 @@
     function receiveMessage (event) {
         var data = event.data
         span.innerHTML = data
-        parentWin.postMessage('我收到你的信息了😀--from 3005 port', 'http://localhost:3004/')
+        parentWin.postMessage('😘我收到你的信息了😀--from 3005 port', 'http://localhost:3004/')
     }
 
     window.addEventListener('message', receiveMessage, false)
