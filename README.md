@@ -8,24 +8,17 @@
 - npm 全局安装
 
 运行步骤
-1. cross-domain-demo目录下npm install，下载项目所需的依赖
-2. 进入对应的demo目录
+1. cross-domain目录下npm install，下载项目所需的依赖
+2. 进入对应的demo目录，①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
+2. 或者在对应的demo目录下，dos窗口输入`run.bat`，直接一步完成上面的①②③
 
 ### 一、CROS跨域
-cros-demo目录下
-1. node serverRes.js
-2. 重新开一个dos窗口
-3. node serverReq.js
 
 项目运行起来之后，
 - 请求数据页面地址： http://localhost:3000/
 - 查看数据： http://localhost:3001/
 
 ### 二、JSONP跨域
- - 可以直接在jsonp-demo目录下的dos窗口`输入run.bat`，直接一步完成。
-
- - 也可以跟原来的步骤一样，
-在jsonp-demo目录下①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
 
 项目运行起来后，
 > 请求页面： http://localhost:3002/
