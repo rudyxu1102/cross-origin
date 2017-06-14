@@ -23,12 +23,12 @@
 </head>
 <body>
 <div id="father">
-    <p>这里3004端口</p>
+    <p>这里3000端口</p>
     <input type="text"/>
     <button>发送信息</button>
     <p style="text-align: left;">message:  <span></span></p>
 </div>
-<iframe id="child" src="http://localhost:3005"></iframe>
+<iframe id="child" src="http://localhost:3001"></iframe>
 <script>
     var input = document.getElementsByTagName('input')[0]
     var span = document.getElementsByTagName('span')[0]
@@ -37,7 +37,7 @@
 
     btn.onclick = function () {
         var msg = input.value
-        frame.postMessage(msg + ' --from 3004 port', 'http://localhost:3005')
+        frame.postMessage(msg + ' --from 3000 port', 'http://localhost:3001')
     }
 
     function receiveMessage (event) {

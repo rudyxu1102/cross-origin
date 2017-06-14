@@ -5,7 +5,7 @@
     <title>响应页面</title>
 </head>
 <body>
-<p style="text-align: center;">这里是3005端口</p>
+<p style="text-align: center;">这里是3001端口</p>
 <p>message： <span></span></p>
 <script>
     var input = document.getElementsByTagName('input')[0]
@@ -16,7 +16,7 @@
     function receiveMessage (event) {
         var data = event.data
         span.innerHTML = data
-        parentWin.postMessage('😘我收到你的信息了😀--from 3005 port', 'http://localhost:3004/')
+        parentWin.postMessage('😘我收到你的信息了😀--from 3001 port', 'http://localhost:3000/')
     }
 
     window.addEventListener('message', receiveMessage, false)
