@@ -10,15 +10,11 @@
 <p>hello world</p>
 
 <script>
-    var p = document.getElementsByTagName('p')[0]
+    var p = document.getElementsByTagName('p')[0];
     var io = io.connect('http://127.0.0.1:3001');
     io.on('data', function (data) {
-        alert('2s后改变数据👻')
-        setTimeout((function (value) {
-            return function () {
-                p.innerHTML = value
-            }
-        })(data), 2000)
+        alert('2s后改变数据👻');
+        p.innerHTML = data
     });
 </script>
 </body>
