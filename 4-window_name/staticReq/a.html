@@ -7,12 +7,17 @@
 <body>
 <p>hello world</p>
 <script>
-var p = document.getElementsByTagName('p')[0]
-var isFirst = true
-var iframe = document.createElement('iframe')
+var p = document.getElementsByTagName('p')[0];
+var isFirst = true;
+var iframe = document.createElement('iframe');
+
+iframe.src = 'http://localhost:3001/c.html'; //第一次加载url
+iframe.style.display = 'none';
+document.body.appendChild(iframe);
+
 var loadFunc = function () {
     if(isFirst){
-        //加载完url后，修改src属性回原域
+        //加载完url后，修改src属性，使其与3000端口同源
         iframe.src = 'http://localhost:3000/b.html';
         isFirst = false;
     }else {
@@ -24,11 +29,6 @@ var loadFunc = function () {
         iframe = null;
     }
 }
-
-
-iframe.src = 'http://localhost:3001/c.html'; //第一次加载url
-iframe.style.display = 'none';
-document.body.appendChild(iframe);
 
 //监听iframe是否加载，加载完执行loadFunc
 iframe.onload = loadFunc;

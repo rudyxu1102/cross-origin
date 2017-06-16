@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var responsePort = 3001;  // ÏìÓ¦ÇëÇóµÄÒ³ÃæÅÜÔÚ3001¶Ë¿Ú
+var responsePort = 3001;  // å“åº”è¯·æ±‚çš„é¡µé¢è·‘åœ¨3001ç«¯å£
 
 app.use(express.static(__dirname + '/staticRes'));
 
