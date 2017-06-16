@@ -44,14 +44,13 @@
 ### 6. document.domain跨域
 document.domain设置成自身或更高一级的父域，且主域必须相同。
 
-#### 注意
+#### 注意！！
 这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，所以无法在本地运行。
 
 > 线上访问地址： http://a.xuhaodong.cn/a.html
 
 
 如果要在本地运行的话，需要搭建一个本地web服务器，
-
 参考链接：https://github.com/web2hack/proxy
 
 ### 7. 后端设置代理proxy跨域
