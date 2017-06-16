@@ -46,7 +46,7 @@
 document.domain设置成自身或更高一级的父域，且主域必须相同。
 
 #### 注意！！
-这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，所以无法在本地运行。
+这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，所以抱歉这个demo无法在本地运行。不过我只是把demo放到了云服务器上，代码还是一样的，没有修改过。
 
 > 线上访问地址： http://a.xuhaodong.cn/a.html
 
