@@ -10,16 +10,16 @@
 <p>hello world!</p>
 
 <script>
-    var btn = document.getElementsByTagName('button')[0]
-    var text = document.getElementsByTagName('p')[0]
+    var btn = document.getElementsByTagName('button')[0];
+    var text = document.getElementsByTagName('p')[0];
     btn.addEventListener('click', function () {
-        var xhr = new XMLHttpRequest()
-        var url = 'http://localhost:3000/api'    // 向http://localhost:3000/api发出请求，获取数据
-        xhr.open('GET', url)
-        xhr.send(null)
+        var xhr = new XMLHttpRequest();
+        var url = 'http://localhost:3000/api';    // 向http://localhost:3000/api发出请求，获取数据
+        xhr.open('GET', url);
+        xhr.send(null);
         xhr.onreadystatechange = () => {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {  // 如果请求成功
-                text.innerHTML = xhr.response
+                text.innerHTML = xhr.response;
             }
         }
     })

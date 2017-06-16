@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-var responsePort = 3001;  // ÇëÇóÒ³ÃæÅÜÔÚ3001¶Ë¿Ú
+var responsePort = 3001;  // è¯·æ±‚é¡µé¢è·‘åœ¨3001ç«¯å£
 
 app.get('/api', (req, res) => {
-    res.send("Hello world from Proxy. ?")
+    res.send("Hello world from Proxy  :)")
 });
 
 app.listen(responsePort, function () {

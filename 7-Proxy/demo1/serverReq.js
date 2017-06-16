@@ -1,13 +1,13 @@
 var express = require('express');
 var proxy = require('http-proxy-middleware');
 
-var requestPort = 3000;  // ÇëÇóÒ³ÃæÅÜÔÚ3006¶Ë¿Ú
+var requestPort = 3000;  // è¯·æ±‚é¡µé¢è·‘åœ¨3000ç«¯å£
 var app = express();
 
 app.use(express.static(__dirname));
 
 app.use('/api', proxy({target: 'http://localhost:3001/', changeOrigin: true}));
-// changeOriginÉèÖÃÎªtrue£¬±¾µØ»áÐéÄâÒ»¸ö·þÎñ¶Ë½ÓÊÕÄãµÄÇëÇó²¢´úÄã·¢ËÍ¸ÃÇëÇó
+// changeOriginè®¾ç½®ä¸ºtrueï¼Œæœ¬åœ°ä¼šè™šæ‹Ÿä¸€ä¸ªæœåŠ¡ç«¯æŽ¥æ”¶ä½ çš„è¯·æ±‚å¹¶ä»£ä½ å‘é€è¯¥è¯·æ±‚
 // http://localhost:3000/api   -->   http://localhost:3001/api
 
 app.listen(requestPort, function () {
