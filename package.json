@@ -7,6 +7,7 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
-    "http-proxy-middleware": "^0.17.4"
+    "http-proxy-middleware": "^0.17.4",
+    "socket.io": "^2.0.3"
   }
 }

@@ -1,3 +1,7 @@
-/**
- * Created by ĞíºÆ¶« on 2017/6/15.
- */
+var app = require('express')();
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.on('connection', function (client) {
+    client.emit('data', 'Hello WebSocket from 3001.');
+});
+server.listen(3001);    //ç›‘å¬3001ç«¯å£

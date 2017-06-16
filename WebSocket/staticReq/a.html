@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>WebSocket Demo</title>
+    <script src="//cdn.bootcss.com/socket.io/1.7.2/socket.io.min.js"></script>
 </head>
 <body>
+<h1>WebSocket Demo</h1>
+<p>hello world</p>
 
+<script>
+    var p = document.getElementsByTagName('p')[0]
+    var io = io.connect('http://127.0.0.1:3001');
+    io.on('data', function (data) {
+        alert('2s后改变数据👻')
+        setTimeout((function (value) {
+            return function () {
+                p.innerHTML = value
+            }
+        })(data), 2000)
+    });
+</script>
 </body>
 </html>
