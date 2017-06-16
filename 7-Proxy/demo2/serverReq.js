@@ -4,14 +4,14 @@ var http= require('http');
 var portNumber = 3000;
 var app = express();
 
-app.use(express.static(__dirname)); //¼´index.html
+app.use(express.static(__dirname)); //å³index.html
 
 app.get('/proxy', function(request, response){
     var url = request.query.url    // http://localhost:3001/
 
-    // Ïòurl·¢³öÇëÇó
+    // å‘urlå‘å‡ºè¯·æ±‚
     http.get(url, function(responseFromOtherDomain) {
-        // dataÊÂ¼ş»áÔÚÊı¾İ½ÓÊÕ¹ı³ÌÖĞ£¬Ã¿ÊÕµ½Ò»¶ÎÊı¾İ¾Í´¥·¢Ò»´Î£¬½ÓÊÕµ½µÄÊı¾İ±»´«Èë»Øµ÷º¯Êı¡£
+        // dataäº‹ä»¶ä¼šåœ¨æ•°æ®æ¥æ”¶è¿‡ç¨‹ä¸­ï¼Œæ¯æ”¶åˆ°ä¸€æ®µæ•°æ®å°±è§¦å‘ä¸€æ¬¡ï¼Œæ¥æ”¶åˆ°çš„æ•°æ®è¢«ä¼ å…¥å›è°ƒå‡½æ•°ã€‚
         responseFromOtherDomain.on("data", function(data) {
             response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
             response.end(data);
