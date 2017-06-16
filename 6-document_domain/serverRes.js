@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
 
-var responsePort = 3001;  // 请求页面跑在3001端口
+var responsePort = 3001;  // 璇锋眰椤甸潰璺戝湪3001绔彛
 
-app.use(express.static(__dirname + '/staticRes')); //3001端口的静态文件，即index.html
+app.use(express.static(__dirname + '/staticRes')); //3001绔彛鐨勯潤鎬佹枃浠讹紝鍗砳ndex.html
 
 app.listen(responsePort, function () {
     console.log('Responser is listening on port '+ responsePort);

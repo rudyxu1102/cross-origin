@@ -15,8 +15,8 @@
             border: 2px solid darkturquoise;
             width: 500px;
             height: 200px;
-            margin: 0 auto 20px;
-            display: inline-block;
+            margin-bottom: 20px;
+            display: block;
         }
     </style>
 </head>
@@ -27,13 +27,13 @@
 </div>
 <iframe src="http://b.xuhaodong.cn/b.html" id="iframe" onload="test()"></iframe>
 <script>
-    var p = document.getElementsByTagName('p')[0]
+    var p = document.getElementsByTagName('p')[0];
     document.domain = 'xuhaodong.cn';//设置成主域
     function test(){
-        var win_b = document.getElementById('iframe').contentWindow
-        var data = win_b.data
-        alert('稍后获得来自b.xuhaodong.cn的数据')
-        p.innerHTML = data
+        var win_b = document.getElementById('iframe').contentWindow;
+        var data = win_b.data;
+        alert('稍后获得来自b.xuhaodong.cn的数据');
+        p.innerHTML = data;
     }
 </script>
 </body>
