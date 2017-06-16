@@ -43,13 +43,16 @@
 
 ### 6. document.domain跨域
 document.domain设置成自身或更高一级的父域，且主域必须相同。
-这是一个线上的demo，所以无法在本地运行
-线上访问地址： http://a.xuhaodong.cn/a.html
-这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo
 
-如果要在本地运行的话，需要搭建一个本地web服务器
+```
+这是一个线上的demo，所以无法在本地运行，
+线上访问地址： http://a.xuhaodong.cn/a.html ，
+这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，
+
+如果要在本地运行的话，需要搭建一个本地web服务器，
+
 参考链接：https://github.com/web2hack/proxy
-
+```
 
 ### 7. 后端设置代理proxy跨域
 因为JS同源策略是浏览器的安全策略，所以在浏览器客户端不能跨域访问，而服务器端调用HTTP接口只是使用HTTP协议，不会执行JS脚本，不需要同源策略，也就没有跨越问题。简单地说，就是浏览器不能跨域，后台服务器可以跨域。
