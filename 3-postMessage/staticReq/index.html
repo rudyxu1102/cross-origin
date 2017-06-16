@@ -15,9 +15,8 @@
             border: 2px solid darkturquoise;
             width: 500px;
             height: 200px;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
             text-align: center;
-            display: inline-block;
         }
     </style>
 </head>
@@ -26,26 +25,26 @@
     <p>这里3000端口</p>
     <input type="text"/>
     <button>发送信息</button>
-    <p style="text-align: left;">message:  <span></span></p>
+    <p style="text-align: left;">message :  <span></span></p>
 </div>
 <iframe id="child" src="http://localhost:3001"></iframe>
 <script>
-    var input = document.getElementsByTagName('input')[0]
-    var span = document.getElementsByTagName('span')[0]
-    var btn = document.getElementsByTagName('button')[0]
-    var frame = document.getElementById('child').contentWindow
+    var input = document.getElementsByTagName('input')[0];
+    var span = document.getElementsByTagName('span')[0];
+    var btn = document.getElementsByTagName('button')[0];
+    var frame = document.getElementById('child').contentWindow;
 
     btn.onclick = function () {
-        var msg = input.value
-        frame.postMessage(msg + ' --from 3000 port', 'http://localhost:3001')
+        var msg = input.value;
+        frame.postMessage('收到信息：' + msg + ' --from 3000 port！😨', 'http://localhost:3001');
     }
 
     function receiveMessage (event) {
-        var data = event.data
-        span.innerHTML = data
+        var data = event.data;
+        span.innerHTML = data;
     }
 
-    window.addEventListener('message', receiveMessage, false)
+    window.addEventListener('message', receiveMessage, false);
 </script>
 </body>
 </html>

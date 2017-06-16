@@ -8,18 +8,18 @@
 <p style="text-align: center;">这里是3001端口</p>
 <p>message： <span></span></p>
 <script>
-    var input = document.getElementsByTagName('input')[0]
-    var span = document.getElementsByTagName('span')[0]
-    var btn = document.getElementsByTagName('button')[0]
-    var parentWin = window.parent
+    var input = document.getElementsByTagName('input')[0];
+    var span = document.getElementsByTagName('span')[0];
+    var btn = document.getElementsByTagName('button')[0];
+    var parentWin = window.parent;
 
     function receiveMessage (event) {
-        var data = event.data
-        span.innerHTML = data
-        parentWin.postMessage('😘我收到你的信息了😀--from 3001 port', 'http://localhost:3000/')
+        var data = event.data;
+        span.innerHTML = data;
+        parentWin.postMessage('我收到你的信息了😀--from 3001 port', 'http://localhost:3000/');
     }
 
-    window.addEventListener('message', receiveMessage, false)
+    window.addEventListener('message', receiveMessage, false);
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ var app = express();
 
 var requestPort = 3000;
 
-app.use(express.static(__dirname + '/staticReq')); //3000端口的静态文件，即index.html
+app.use(express.static(__dirname + '/staticReq')); //3000绔彛鐨勯潤鎬佹枃浠讹紝鍗砳ndex.html
 
 app.listen(requestPort, function () {
     console.log('Requester is listening on port '+ requestPort);
