@@ -7,17 +7,16 @@
 <body>
 <p>hello world</p>
 <script>
-var p = document.getElementsByTagName('p')[0]
-
-var iframe = document.createElement('iframe')
-iframe.src = 'http://localhost:3001/c.html#getdata'   // location.hash为'#getdata'
+var p = document.getElementsByTagName('p')[0];
+var iframe = document.createElement('iframe');
+iframe.src = 'http://localhost:3001/c.html#getdata';   // location.hash为'#getdata'
 iframe.style.display = 'none';
 document.body.appendChild(iframe);
 
 function checkHash () {
     if (location.hash) {
-        let data = location.hash.substring(1)     // 去除'#'号
-        p.innerHTML = data
+        let data = location.hash.substring(1);     // 去除'#'号
+        p.innerHTML = data;
     }
 }
 setInterval(checkHash, 2000);   // 每隔2s监听hash值是否发生变化
