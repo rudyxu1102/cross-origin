@@ -1,9 +1,10 @@
-var express = require('express'); // ÒıÓÃexpressÄ£¿é
-var app = express();  // ´´½¨Ò»¸ö¼òµ¥µÄ·şÎñÆ÷
+var express = require('express'); // å¼•ç”¨expressæ¨¡å—
+var app = express();  // åˆ›å»ºä¸€ä¸ªç®€å•çš„æœåŠ¡å™¨
 
 var requestPort = 3000;
 
 app.use(express.static(__dirname));
+
 app.listen(requestPort, function () {
     console.log('Requester is listening on port '+ requestPort);
 });

@@ -5,8 +5,9 @@ var responsePort = 3001;
 
 app.get('/', function (req, res) {
     var callbackName = req.query.callback;   // myFunction
-    res.send(callbackName+"({'message': 'hello world from JSONP! ?'});");
-    // myFunction({'message': 'hello world from JSONP!'}) Ò»¸ö´ø²ÎÊıµÄÖ´ĞĞº¯Êı
+    res.send(callbackName+"({'message': 'hello world from JSONP!ğŸ™ƒ'});");
+    // myFunction({'message': 'hello world from JSONP!'})
+    // ä¸€ä¸ªå¸¦å‚æ•°çš„æ‰§è¡Œå‡½æ•°
 })
 
 app.listen(responsePort, function () {
