@@ -8,9 +8,10 @@
 - npm 全局安装
 
 运行步骤
-1. cross-domain目录下npm install，下载项目所需的依赖
-2. 进入对应的demo目录，①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
-2. 或者在对应的demo目录下，dos窗口输入`run.bat`，直接一步完成上面的①②③
+1. `git clone git@github.com:FatDong1/cross-domain`
+2. cross-domain目录下npm install，下载项目所需的依赖
+3. 进入对应的demo目录，①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
+4. 或者在对应的demo目录下，dos窗口输入`run.bat`，直接一步完成上面的①②③
 
 ### 1. CROS跨域
 
