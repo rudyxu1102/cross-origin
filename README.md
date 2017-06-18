@@ -3,6 +3,11 @@
 > 如果还有其他没提及的跨域方法，欢迎PR，谢谢！
 如果要收藏的话，欢迎star。
 
+#### 配置文件解释
+- .gitattributes配置文件，可以改变这个github项目的语言标签
+- .gitignore配置文件，设置使用git上传时忽略哪些文件
+- package.json配置文件，主要是为了`npm install`而存在，安装express等模块
+- readme.md配置文件，在github上面展示说明项目，也就是现在正在看的文档
 ### Set Up
 运行环境
 - node.js 全局安装

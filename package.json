@@ -4,9 +4,7 @@
   "author": "FatDong",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2"
-  },
-  "devDependencies": {
+    "express": "^4.15.2",
     "http-proxy-middleware": "^0.17.4",
     "socket.io": "^2.0.3"
   }
