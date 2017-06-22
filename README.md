@@ -19,7 +19,7 @@
 3. 进入对应的demo目录，①node serverRes.js  ②重新开一个dos窗口   ③node serverReq.js
 4. 或者在对应的demo目录下，dos窗口输入`run.bat`，直接一步完成上面的①②③
 
-### 1. CROS跨域
+### 1. CORS跨域
 
 项目运行起来之后，
 - 请求数据页面地址： http://localhost:3000
