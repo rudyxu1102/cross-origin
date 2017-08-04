@@ -1,15 +1,15 @@
-var express = require('express'); // ÒıÓÃexpressÄ£¿é
-var app = express();  // ´´½¨Ò»¸ö¼òµ¥µÄ·şÎñÆ÷
+var express = require('express'); // å¼•ç”¨expressæ¨¡å—
+var app = express();  // åˆ›å»ºä¸€ä¸ªç®€å•çš„æœåŠ¡å™¨
 
-var requestPort = 3000;  // ÇëÇóÒ³ÃæÅÜÔÚ3000¶Ë¿Ú
+var requestPort = 3000;  // è¯·æ±‚é¡µé¢è·‘åœ¨3000ç«¯å£
 
-app.use(express.static(__dirname + '/static')); //3000¶Ë¿ÚµÄ¾²Ì¬ÎÄ¼ş£¬¼´index.html
+app.use(express.static(__dirname + '/static')); //3000ç«¯å£çš„é™æ€æ–‡ä»¶ï¼Œå³index.html
 
-// __dirnameÊ¼ÖÕÖ¸Ïòµ±Ç°js´úÂëÎÄ¼ş(serverReq.js)ËùÔÚµÄÄ¿Â¼, ÔÚÎÒµÄ±¾µØÄ¿Â¼ÊÇD:\cross-domain\CROS
-// console.log(__dirname) ÔÚdos´°¿Ú¿ÉÒÔ¿´µ½
-// ÉÏÃæ¡°express.static(__dirname + '/static')¡±µÄÒâË¼ÏîÄ¿µÄ¾²Ì¬ÎÄ¼şÄ¿Â¼ÔÚ D:\cross-domain\CROS\static
-// ¿ÉÒÔÔÚstaticÀïÃæËæ±ã¼ÓÈëb.html, È»ºóÔÚhttp://localhost:3000/b.html¿ÉÒÔÏÔÊ¾
+// __dirnameå§‹ç»ˆæŒ‡å‘å½“å‰jsä»£ç æ–‡ä»¶(serverReq.js)æ‰€åœ¨çš„ç›®å½•, åœ¨æˆ‘çš„æœ¬åœ°ç›®å½•æ˜¯D:\cross-domain\1-CORS
+// console.log(__dirname) åœ¨dosçª—å£å¯ä»¥çœ‹åˆ°
+// ä¸Šé¢â€œexpress.static(__dirname + '/static')â€çš„æ„æ€é¡¹ç›®çš„é™æ€æ–‡ä»¶ç›®å½•åœ¨ D:\cross-domain\1-CORS\static
+// å¯ä»¥åœ¨staticé‡Œé¢éšä¾¿åŠ å…¥b.html, ç„¶ååœ¨ http://localhost:3000/b.html å¯ä»¥æ˜¾ç¤º
 
 app.listen(requestPort, function () {
-    console.log('Requester is listening on port '+ requestPort);  // ÔÚdos´°¿Ú»áÖ´ĞĞÕâ¸ö»Øµ÷º¯Êı
+    console.log('Requester is listening on port '+ requestPort); // åœ¨dosçª—å£ä¼šæ‰§è¡Œè¿™ä¸ªå›è°ƒå‡½æ•°
 });
