@@ -40,6 +40,9 @@
     }
 
     function receiveMessage (event) {
+        if (event.origin !== 'http://localhost:3001') {
+            return false
+        }
         var data = event.data;
         span.innerHTML = data;
     }
