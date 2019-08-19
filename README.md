@@ -78,3 +78,6 @@ document.domain设置成自身或更高一级的父域，且主域必须相同�
 WebSocket是一种通信协议，使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。
 > 项目运行地址： http://localhost:3000/a.html
 
+
+### 9. 关闭浏览器跨域限制
+可以使用[chrome插件CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=zh-CN)
