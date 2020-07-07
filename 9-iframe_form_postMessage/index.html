@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我们的网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>iframe+form+postMessage实现跨域</p>
+    <pre>打开控制台 console 和 network面板查看详情</pre>
+    <script>
+        function request({ url, method = "GET", headers, data, success }) {
+            headers = headers || {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            };
+            window.onmessage = null; // 初始化，移除之前绑定的事件
+            window.onmessage = ({ data }) => {
+                success && success(data);
+            };
+
+            let ifr = document.createElement("iframe");
+            ifr.style.display = "none";
+            ifr.name = "proxy" + Date.now();
+            document.body.appendChild(ifr);
+            // 加载完移除iframe，防止创建多个iframe
+            ifr.addEventListener("load", () => {
+                ifr.remove();
+            });
+            let form = document.createElement("form");
+            let input = document.createElement("input");
+
+            form.style.display = "none";
+            form.action = url;
+            form.method = method.toUpperCase();
+            form.target = ifr.name; // 将form的打开目标移至iframe
+            form.enctype = headers['Content-Type'];
+
+            for (let key in data) {
+                input.name = key;
+                input.value = data[key];
+                form.appendChild(input.cloneNode());
+            }
+
+            document.body.appendChild(form);
+
+            form.submit();
+            form.remove(); // 表单提交之后移除form，防止创建多个form
+        }
+
+        request({
+            url: "http://localhost:3002/user/",
+            method: "POST",
+            data: {
+                name: "Yangfan",
+                age: 23,
+            },
+            success(data) {
+                console.log(data);
+            }
+        });
+
+        request({
+            url: "http://localhost:3002/user/",
+            method: "GET",
+            data: {
+                name: "Yangfan",
+                age: 23,
+            },
+            success(data) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+
+</html>
