@@ -1,17 +1,10 @@
-### 跨域的简单小demo
-这是一个关于跨域的简单demo集合，在demo里面会加上自己的理解并添加相应的注释，尽量以简单的demo介绍跨域的方法，适合`入门`学习跨域的。所有demo都是使用基于nodeJs的Web开发框架Express，需要一点点nodeJS的知识，如果不会nodeJS也没关系，注释里面会详细解释说明。
+### 跨域demo集
+一个关于跨域的简单demo集合，适合`入门`学习跨域的。
+
 > 如果还有其他没提及的跨域方法，欢迎PR，谢谢！
-如果要收藏的话，欢迎star。
-不定期更新教程，欢迎follow订阅。
 
-### demo介绍
+### 原理
 用node的web框架express在`3000端口`和`3001端口`分别开启一个静态服务器，在两个端口间进行跨域传输数据。
-
-#### 配置文件解释
-- .gitattributes配置文件，可以改变这个github项目的语言标签
-- .gitignore配置文件，设置使用git上传时忽略哪些文件
-- package.json配置文件，主要是为了`npm install`而存在，安装express等模块
-- readme.md配置文件，在github上面展示说明项目，也就是现在正在看的文档
 
 ### Set Up
 运行环境
@@ -22,20 +15,33 @@
 1. `git clone git@github.com:FatDong1/cross-domain`
 2. cross-domain目录下npm install，下载项目所需的依赖
 3. 进入对应的demo目录，①node serverRes.js  ②重新开一个终端窗口   ③node serverReq.js
-4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接一步完成上面的①②③
+4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
+
+### 0. 直接跨域，会报什么错？
+![error.png](./image/error.png)
+#### 项目运行起来之后
+- 请求数据页面地址： http://localhost:3000
+- 查看数据： http://localhost:3001
 
 ### 1. CORS跨域
 
-项目运行起来之后，
+#### 项目运行起来之后
 - 请求数据页面地址： http://localhost:3000
 - 查看数据： http://localhost:3001
+
+#### 常考面试题
+- CORS的请求过程（简单请求、复杂请求）。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
 
 ### 2. JSONP跨域
 
-项目运行起来后，
+#### 项目运行起来后
 - 请求页面： http://localhost:3000
 - 响应页面为 http://localhost:3001
+
+#### 常考面试题
+- JSONP的流程
+- JSONP的实现原理
 
 ### 3. postMessage跨域
 这是html5的新API，适用于不同窗口iframe之间的跨域
