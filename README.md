@@ -22,16 +22,17 @@
 4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
 
 ## 目录
-1. [Demo0: 直接跨域，会报什么错？](#demo0. 直接跨域，会报什么错？)
-2. [Demo1: CORS跨域](#Demo1: CORS跨域)
-3. [Demo2: JSONP跨域](#Demo2: JSONP跨域)
-4. [Demo3: postMessage跨域](#Demo3: postMessage跨域)
-5. [Demo4: window.name跨域](#Demo4: window.name跨域)
-6. [Demo6: document.domain跨域](#Demo6: document.domain跨域)
-7. [Demo7: 后端设置代理proxy跨域](#Demo7: 后端设置代理proxy跨域)
-8. [Demo8: WebSocket跨域](#Demo8: WebSocket跨域)
-9. [Demo9: form表单跨域](#Demo9: form表单跨域)
-10. [Demo10: 关闭浏览器跨域限制](#Demo10: 关闭浏览器跨域限制)
+1. [Demo0: 直接跨域，会报什么错？](#demo0-直接跨域会报什么错)
+2. [Demo1: CORS跨域](#demo1-cors跨域)
+3. [Demo2: JSONP跨域](#demo2-jsonp跨域)
+4. [Demo3: postMessage跨域](#demo3-postmessage跨域)
+5. [Demo4: window.name跨域](#demo4-windowname跨域)
+6. [Demo5: location.hash跨域](demo5-locationhash跨域)
+7. [Demo6: document.domain跨域](#demo6-documentdomain跨域)
+8. [Demo7: 后端设置代理proxy跨域](#demo7-后端设置代理proxy跨域)
+9. [Demo8: WebSocket跨域](#demo8-websocket跨域)
+10. [Demo9: form表单跨域](#demo9-form表单跨域)
+11. [Demo10: 关闭浏览器跨域限制](#demo10-关闭浏览器跨域限制)
 
 ## Demo0: 直接跨域，会报什么错？
 项目运行起来之后
