@@ -22,28 +22,30 @@
 4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
 
 ### demo0. 直接跨域，会报什么错？
-#### 项目运行起来之后
+项目运行起来之后
 - 请求数据页面地址： http://localhost:3000
 - 查看数据： http://localhost:3001
+
+点击按钮请求3001端口数据
 ![error.png](./image/error.png)
 
 ### demo1. CORS跨域
 
-#### 项目运行起来之后
+项目运行起来之后
 - 请求数据页面地址： http://localhost:3000
 - 查看数据： http://localhost:3001
 
-#### 常考面试题
+常考面试题
 - CORS的请求过程（简单请求、复杂请求）。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
 
 ### demo2. JSONP跨域
 
-#### 项目运行起来后
+项目运行起来后
 - 请求页面： http://localhost:3000
 - 响应页面为 http://localhost:3001
 
-#### 常考面试题
+常考面试题
 - JSONP的流程
 - JSONP的实现原理
 
