@@ -6,20 +6,8 @@
 ## 原理
 用node的web框架express在`3000端口`和`3001端口`分别开启一个静态服务器，在两个端口间进行跨域传输数据。
 
-- serverReq.js 可以简单理解为前端界面，服务器运行在3000端口
-- serverRes.js 可以简单理解为后端接口，服务器运行在3001端口
-
-
-## Set Up
-运行环境
-- node.js 全局安装
-- npm 全局安装
-
-运行步骤
-1. `git clone git@github.com:FatDong1/cross-domain`
-2. cross-domain目录下npm install，下载项目所需的依赖
-3. 进入对应的demo目录，①node serverRes.js  ②重新开一个终端窗口   ③node serverReq.js
-4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
+- 3000端口: 为前端界面，前端静态资源放在3000端口的服务器上
+- 3001端口: 为后端接口服务器
 
 ## 目录
 1. [Demo0: 直接跨域，会报什么错？](#demo0-直接跨域会报什么错)
@@ -33,6 +21,17 @@
 9. [Demo8: WebSocket跨域](#demo8-websocket跨域)
 10. [Demo9: form表单跨域](#demo9-form表单跨域)
 11. [Demo10: 关闭浏览器跨域限制](#demo10-关闭浏览器跨域限制)
+
+## Set Up
+运行环境
+- node.js 全局安装
+- npm 全局安装
+
+运行步骤
+1. `git clone git@github.com:FatDong1/cross-domain`
+2. cross-domain目录下npm install，下载项目所需的依赖
+3. 进入对应的demo目录，①node serverRes.js  ②重新开一个终端窗口   ③node serverReq.js
+4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
 
 ## Demo0: 直接跨域，会报什么错？
 项目运行起来之后
