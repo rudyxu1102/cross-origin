@@ -27,7 +27,9 @@
 - 查看数据： http://localhost:3001
 
 点击按钮请求3001端口数据，会报错，如下图所示。
+
 ---
+
 ![error.png](./image/error.png)
 
 ### demo1. CORS跨域
