@@ -15,7 +15,7 @@
 3. [Demo2: JSONP跨域](#demo2-jsonp跨域)
 4. [Demo3: postMessage跨域](#demo3-postmessage跨域)
 5. [Demo4: window.name跨域](#demo4-windowname跨域)
-6. [Demo5: location.hash跨域](demo5-locationhash跨域)
+6. [Demo5: location.hash跨域](#demo5-locationhash跨域)
 7. [Demo6: document.domain跨域](#demo6-documentdomain跨域)
 8. [Demo7: 后端设置代理proxy跨域](#demo7-后端设置代理proxy跨域)
 9. [Demo8: WebSocket跨域](#demo8-websocket跨域)
