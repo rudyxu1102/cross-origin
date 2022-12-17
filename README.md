@@ -1,7 +1,5 @@
-## 跨域demo集
-一个关于跨域的简单demo集合，适合`入门`学习跨域的。
-
-> 任何对初学者学习跨域有用的PR都会接受，谢谢！
+## 介绍
+一个关于跨域的简单demo集合，适合初学者学习跨域。
 
 ## 原理
 用node的web框架express在`3000端口`和`3001端口`分别开启一个静态服务器，在两个端口间进行跨域传输数据。
@@ -28,10 +26,9 @@
 - npm 全局安装
 
 运行步骤
-1. `git clone git@github.com:FatDong1/cross-domain`
-2. cross-domain目录下npm install，下载项目所需的依赖
-3. 进入对应的demo目录，①node serverRes.js  ②重新开一个终端窗口   ③node serverReq.js
-4. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
+1. cross-domain目录下npm install，下载项目所需的依赖
+2. 进入对应的demo目录，①node serverRes.js  ②重新开一个终端窗口   ③node serverReq.js
+3. 或者在对应的demo目录下，终端窗口输入`bash run.bat`或者使用脚本`run.sh`，直接完成上一步的①②③
 
 ## Demo0: 直接跨域，会报什么错？
 项目运行起来之后
@@ -85,9 +82,6 @@ document.domain设置成自身或更高一级的父域，且主域必须相同�
 【服务器已过期，域名无法使用，demo作废】
 #### 注意！！
 这是挂在我自己腾讯云域名(xuhaodong.cn)上的demo，所以抱歉这个demo无法在本地运行。不过我只是把demo放到了云服务器上，代码还是一样的，没有修改过。
-
-> 线上访问地址： http://a.xuhaodong.cn/a.html
-
 
 如果要在本地运行的话，需要搭建一个本地web服务器，
 参考链接：https://github.com/web2hack/proxy
